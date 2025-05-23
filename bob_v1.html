@@ -1,0 +1,164 @@
+
+
+<!-- Bob Timeline Homepage (avatar inside first milestone) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meet Bob</title>
+  <!-- Favicon -->
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+  <style>
+    /* ===== base ===== */
+    :root {
+      --c-bg: #f1f5f9;
+      --c-primary: #2563eb;
+      --c-dark: #0f172a;
+      --c-muted: #475569;
+      --c-white: #fff;
+      font-size: 16px;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Inter,system-ui,sans-serif;background:var(--c-bg);color:var(--c-dark);line-height:1.6}
+    img{max-width:100%;height:auto}
+    a{color:var(--c-primary);text-decoration:none}
+
+    /* ===== helpers ===== */
+    .container{max-width:920px;margin-inline:auto;padding-inline:1rem}
+    .center{text-align:center}
+
+    /* ===== hero ===== */
+    header{
+      padding:4rem 1rem 4rem;
+      /* swap blue gradient for your banner image */
+      background: url("assets/banner.png") 50% 50% /cover no-repeat;
+      /* optional solid fallback while image loads */
+      background-color:#3b82f6;
+
+      color:var(--c-white);
+      text-align:center;
+    }
+    header h1{font-size:2.8rem;font-weight:800;letter-spacing:-.02em}
+    header p{margin-top:1rem;font-size:1.15rem;opacity:.95}
+    .cta{margin-top:2.5rem;display:inline-block;background:var(--c-white);color:var(--c-primary);padding:.85rem 2rem;font-weight:600;border-radius:.75rem;box-shadow:0 6px 24px rgba(0,0,0,.15);transition:.18s transform}
+    .cta:hover{transform:translateY(-3px)}
+
+    /* ===== timeline ===== */
+    section.timeline{padding:6rem 0 4rem;position:relative}
+    .timeline::before{content:"";position:absolute;left:50%;top:0;width:4px;height:100%;background:#cbd5e1;transform:translateX(-50%)}
+
+    .milestone{position:relative;width:calc(50% - 2rem);padding:1.1rem 2rem 1.5rem;background:var(--c-white);border-radius:1rem;box-shadow:0 4px 16px rgba(0,0,0,.06);margin-bottom:3rem}
+    .milestone h3{font-size:1.25rem;font-weight:700;margin-bottom:.4rem}
+    .milestone p{color:var(--c-muted);font-size:.95rem}
+    .milestone time{font-size:.85rem;color:var(--c-primary);font-weight:600;display:block;margin-bottom:.25rem}
+    .milestone img.icon{width:40px;height:40px;margin-bottom:.75rem}
+
+    /* shared avatar look & feel */
+    .milestone .left_milestone,
+    .milestone .right_milestone {
+      position: absolute;
+      top: -36px;
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      border: 4px solid var(--c-white);
+      box-shadow: 0 4px 12px rgba(0,0,0,.15);
+      background: var(--c-white);
+      object-fit: cover;
+    }
+
+    /* left-column boxes: circle sits outside on the left */
+    .milestone.left   .left_milestone  { left: -36px; }
+
+    /* right-column boxes: circle sits outside on the right */
+    .milestone.right  .right_milestone { right: -36px; left: auto; }
+
+    /* left & right alignment */
+    .milestone.left{text-align:right;left:0}
+    .milestone.right{left:53.5%}
+    .milestone.left::after,.milestone.right::after{content:"";position:absolute;top:1.25rem;width:14px;height:14px;background:var(--c-primary);border:4px solid var(--c-white);border-radius:50%;box-shadow:0 0 0 3px #cbd5e1}
+    .milestone.left::after{right:-27px}
+    .milestone.right::after{left:-27px}
+
+    /* soon banner */
+    .soon {
+      display: inline-block;    /* shrink to content width  */
+      padding: 0.35rem 0.9rem;  /* tighter than before     */
+      border: 1px solid #facc15;
+      border-radius: 0.4rem;    /* subtle rounding          */
+      background: #fefce8;
+      font-size: 0.9rem;
+      color: #854d0e;
+    }
+    .soon strong{color:#d97706}
+
+    /* ===== footer ===== */
+    footer{background:var(--c-dark);color:#cbd5e1;text-align:center;padding:2rem 1rem;font-size:.875rem}
+    footer a{color:#93c5fd}
+
+    /* ===== responsive ===== */
+    @media(max-width:768px){
+      .milestone,.milestone.left,.milestone.right{width:100%;left:0;text-align:left}
+      .timeline::before{left:40px}
+      .milestone.left::after,.milestone.right::after{left:18px}
+      .milestone{padding-left:4.5rem}
+      .milestone .left_milestone{left:16px}
+    }
+
+    /* ===== ensure footer all the way to bottom of page ===== */
+    body{
+          display: flex;
+          flex-direction: column;
+          min-height: 100vh;   /* 100 % of the viewport height */
+        }
+
+    footer{
+          margin-top: auto;
+        }
+  </style>
+</head>
+<body>
+  <!-- ===== hero ===== -->
+  <header>
+    <div class="container">
+      <h1>Bob – Explains Anything in One Shortcut</h1>
+      <p>Highlight text · hit Ctrl/Cmd + Shift + Z · stay focused.</p>
+      <a class="cta" href="https://chromewebstore.google.com/detail/YOUR_ID">Add to Chrome</a>
+    </div>
+  </header>
+
+  <!-- ===== timeline ===== -->
+  <section class="timeline container">
+    <!-- Origin with avatar -->
+    <article class="milestone left">
+      <img class="left_milestone" src="assets/bob_reading.png" alt="Bob Reading" />
+      <time>Mar 2025</time>
+      <h3>✨ Bob Comes to Life</h3>
+      <p>Born from a weekend hackathon, Bob learned to turn dense paragraphs into crystal‑clear explanations.</p>
+    </article>
+
+    <!-- Version 1.0 -->
+    <article class="milestone right">
+      <img class="right_milestone" src="assets/bob_avatar.png" alt="Bob Avatar" />
+      <time>May 2025</time>
+      <h3>v1.0 – Launch 🚀</h3>
+      <p>First public release! Highlight any text → Ctrl/Cmd + Shift + Z → get an instant explanation without leaving your tab.</p>
+    </article>
+
+    <!-- Upcoming 1.5 -->
+    <article class="milestone left">
+      <time>Summer 2025</time>
+      <h3>v1.5 – Bob Finds His Voice</h3>
+      <p>We’re teaching Bob to <strong>talk</strong>! Plus quick “simplify / nerd‑up” buttons for any answer.</p>
+      <div class="soon">⚒️ <strong>In the works</strong></a></div>
+    </article>
+  </section>
+
+  <!-- ===== footer ===== -->
+  <footer>
+    Built with 💙 by Jacob &amp; Bob</a>
+  </footer>
+</body>
+</html>
+
