@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy &amp; License – Bob Extension</title>
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+
+  <style>
+    /* ===== base palette (matches index.html) ===== */
+    :root{
+      --c-bg:#f1f5f9;
+      --c-primary:#2563eb;
+      --c-dark:#0f172a;
+      --c-muted:#475569;
+      --c-white:#ffffff;
+    }
+
+    /* ===== reset & typography ===== */
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:Inter,system-ui,sans-serif;
+      background:var(--c-bg);
+      color:var(--c-dark);
+      line-height:1.75;
+      display:flex;
+      flex-direction:column;
+      min-height:100vh;
+    }
+    a{color:var(--c-primary);text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    /* ===== reusable container ===== */
+    .container{max-width:920px;margin-inline:auto;padding-inline:1rem}
+
+    /* ===== hero (copied from index) ===== */
+    header{
+      padding:4rem 1rem 4rem;
+      background:url("assets/banner.png") 50% 50% /cover no-repeat;
+      background-color:#3b82f6; /* fallback */
+      color:var(--c-white);
+      text-align:center;
+    }
+    header h1{font-size:2.8rem;font-weight:800;letter-spacing:-.02em;}
+
+    /* ===== document card ===== */
+    .doc-card{
+      background:var(--c-white);
+      border-radius:1rem;
+      box-shadow:0 4px 24px rgba(0,0,0,.06);
+      padding:3rem 2rem 4rem;
+      margin-top:-3rem; /* lift card into header area */
+    }
+    .doc-card h1,.doc-card h2,.doc-card h3{
+      font-family:"Times New Roman",Times,serif;
+      font-weight:700;
+      color:#000;
+    }
+    .doc-card h1{font-size:2rem;margin-bottom:1.2rem}
+    .doc-card h2{font-size:1.35rem;margin-top:2.2rem}
+    .doc-card h3{font-size:1.05rem;margin-top:1.6rem}
+    .doc-card p,.doc-card li{margin:0.9rem 0;color:var(--c-dark)}
+    .doc-card ul{padding-left:1.3rem}
+
+    /* ===== footer ===== */
+    footer{
+      background:var(--c-dark);
+      color:#cbd5e1;
+      text-align:center;
+      padding:2rem 1rem;
+      font-size:.875rem;
+      margin-top:auto;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ===== hero ===== -->
+  <header>
+    <div class="container">
+      <h1>Privacy Policy &amp; License</h1>
+    </div>
+  </header>
+
+  <!-- ===== main ===== -->
+  <main class="container">
+    <section class="doc-card">
+
+      <p><strong>Effective date:</strong> 02 June 2025 | Version 1.0</p>
+      <p><em>Bob can make mistakes. Check important info.</em></p>
+
+
+      <h2>1. Introduction</h2>
+      <p>This Privacy Policy describes how the Bob Chrome Extension (<strong>“Bob,” “we,” “us,”</strong> or <strong>“our”</strong>) collects, uses, shares, and protects personal information obtained through your use of the extension. Bob is owned and operated by <em>[Jacob Link]</em> (<strong>the “Company”</strong>). We process personal data in accordance with CCPA.</p>
+
+      <h2>2. Definitions</h2>
+      <ul>
+        <li><strong>“Extension”</strong> – the Bob software distributed through the Chrome Web Store.</li>
+        <li><strong>“User”</strong> – any natural person who installs or uses the Extension.</li>
+        <li><strong>“Personal data”</strong> – information relating to an identified or identifiable natural person.</li>
+      </ul>
+
+      <h2>3. Data Controller</h2>
+      <p>The Company acts as the data controller for personal data processed via Bob. Contact details appear in Section 14.</p>
+
+      <h2>4. Information We Collect</h2>
+      <h3>4.1 Selected Text Data</h3>
+      <p>When you invoke Bob, the text you highlight (<em>“Selected Text”</em>) is transmitted to our backend API to generate an AI explanation. Selected Text may be stored in the future for the sole purpose of improving Bob user experience.</p>
+
+      <h3>4.2 Preference Data</h3>
+      <p>Bob stores one setting - your preferred explanation tone - on your chrome storage. This data helps to adjust the response returned by Bob to the users liking.</p>
+
+      <h3>4.3 Technical & Usage Data</h3>
+      <p>We create a non-reversible hash of your IP address and retain it for up to 24 hours to enforce fair-use limits. We do not collect fingerprints, User-Agent strings, or browsing history.</p>
+
+      <h2>5. Legal Basis for Processing</h2>
+      <ul>
+        <li><strong>Performance of a contract</strong> – to deliver the requested explanation (Art 6(1)(b) GDPR).</li>
+        <li><strong>Legitimate interests</strong> – to protect service integrity by rate-limiting abuse (Art 6(1)(f) GDPR).</li>
+      </ul>
+
+      <h2>6. Purpose of Processing</h2>
+      <p>We process data exclusively to (i) deliver on-page explanations, (ii) remember your chosen tone, and (iii) prevent service abuse.</p>
+
+      <h2>7. Data Retention</h2>
+      <p>Selected Text is stored to improve future UX. IP entries used for the rate limits auto-expire after 24 hours. Local preference data remains on your device as long as Bob is installed.</p>
+
+      <h2>8. Data Sharing</h2>
+      <p>We do not sell or rent personal data. We may share data with cloud-hosting providers under strict DPAs; processors act solely on our instructions and implement appropriate safeguards.</p>
+
+      <h2>9. International Transfers</h2>
+      <p>Our servers are in <em>North America</em>. If you access Bob from elsewhere, your data may be transferred internationally. We rely on Standard Contractual Clauses or equivalent safeguards.</p>
+
+      <h2>10. Security Measures</h2>
+      <p>All traffic is encrypted. We employ network isolation, least-privilege access controls, and regular audits.</p>
+
+      <h2>11. Your Rights</h2>
+      <p>You may request access, correction, deletion, or restriction of your personal data by contacting us (Section 14).</p>
+
+      <h2>12. Children’s Privacy</h2>
+      <p>Bob is not directed to children under 13. If a child provides us with data, please contact us for deletion.</p>
+
+      <h2>13. Policy Updates</h2>
+      <p>We may amend this Policy. Material changes will be announced in-extension or on our website. Continued use of Bob signifies acceptance of updates.</p>
+
+      <h2>14. Contact</h2>
+      <p>Email: <a href="jklklink@gmail.com">jklklink@gmail.com</a></p>
+
+      <!-- ========== EULA ========== -->
+      <h1>End-User License Agreement (EULA)</h1>
+      <p>This EULA is a legal agreement between you (<strong>“Licensee”</strong>) and the Company. By installing or using Bob, you agree to these terms.</p>
+
+      <h2>A. Grant of License</h2>
+      <p>The Company grants you a non-exclusive, non-transferable, revocable license to use Bob for personal or internal business purposes.</p>
+
+      <h2>B. Intellectual Property</h2>
+      <p>Bobs property is Bobs. All rights not expressly granted are reserved to Bob or the creator of Bob.</p>
+
+      <h2>C. Restrictions</h2>
+      <ul>
+        <li>No reverse-engineering, decompiling, or disassembly.</li>
+        <li>No resale, sublicense, or redistribution without written consent.</li>
+        <li>No circumvention of usage or security mechanisms.</li>
+      </ul>
+
+      <h2>D. AI Disclaimer</h2>
+      <p>Bob relies on machine-generated output. The Company makes no representations regarding accuracy, completeness, or fitness for purpose. AI output may contain errors or bias.</p>
+
+      <h2>E. No Warranty</h2>
+      <p>Bob is provided <strong>“as is”</strong> without any warranties, express or implied, including merchantability or fitness for a particular purpose.</p>
+
+      <h2>F. Limitation of Liability</h2>
+      <p>To the maximum extent permitted by law, the Company shall not be liable for indirect, incidental, consequential, or punitive damages, or loss of data, profits, or goodwill, arising from use of Bob.</p>
+
+      <h2>G. Indemnification</h2>
+      <p>You agree to indemnify and hold the Company harmless from claims or damages arising from your misuse of Bob or violation of this EULA.</p>
+
+      <h2>H. Export Compliance</h2>
+      <p>You may not use or export Bob except as authorized by the United States and local export-control laws.</p>
+
+      <h2>I. Severability & Waiver</h2>
+      <p>If any provision is held unenforceable, remaining provisions remain in effect. Failure to enforce any provision is not a waiver.</p>
+
+      <h2>J. Entire Agreement & Updates</h2>
+      <p>This EULA constitutes the entire agreement regarding Bob and supersedes prior agreements. Continued use after updates signifies acceptance.</p>
+    </section>
+  </main>
+
+  <footer>
+    &larr;&nbsp;<a href="index.html">Back to homepage</a>
+  </footer>
+</body>
+</html>
